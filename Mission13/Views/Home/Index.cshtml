@@ -4,11 +4,13 @@
 
 @model List<Bowler>
 
+
 <h1>Bowlers</h1>
 
 <ul>
     @foreach (var b in Model)
             {
-                <li>@b.BowlerFirstName @b.BowlerMiddleInit @b.BowlerLastName</li>
+                <li>@b.BowlerFirstName @b.BowlerMiddleInit @b.BowlerLastName</li>              
             }
+
 </ul>
