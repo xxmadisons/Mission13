@@ -13,7 +13,7 @@ namespace Mission13.Controllers
     {
         private IBowlersRepository _repo { get; set; }
 
-        private ITeamsRepository _yuh { get; set; }
+        //private ITeamsRepository _yuh { get; set; }
 
         //Constructor
         public HomeController(IBowlersRepository temp)
@@ -21,16 +21,16 @@ namespace Mission13.Controllers
             _repo = temp;
         }
 
-        public HomeController(ITeamsRepository temp2)
-        {
-            _yuh = temp2;
-        }
+        //public HomeController(ITeamsRepository temp2)
+       // {
+           // _yuh = temp2;
+        //}
 
         public IActionResult Index()
         {
 
             var blah = _repo.Bowlers.ToList();
-            var blah2 = _yuh.Teams.ToList();
+            //var blah2 = _yuh.Teams.ToList();
 
             return View(blah);
         }
